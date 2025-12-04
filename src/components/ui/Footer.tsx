@@ -1,0 +1,223 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { Play, Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+
+const Footer = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const socialLinks = [
+    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Youtube, href: '#', label: 'YouTube' },
+  ];
+
+  const quickLinks = [
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#portfolio', label: 'Portfolio' },
+    { href: '#services', label: 'Services' },
+    { href: '#reviews', label: 'Reviews' },
+    { href: '#contact', label: 'Contact' },
+  ];
+
+  const services = [
+    'Video Editing',
+    'Motion Graphics',
+    'Color Grading',
+    'Audio Post',
+    'Social Media Content',
+    'Documentary Editing',
+  ];
+
+  return (
+    <footer className="bg-gray-800 border-t border-primary/10">
+      {/* Main Footer */}
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand Section */}
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-1"
+          >
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent-purple rounded-lg flex items-center justify-center">
+                <Play className="text-white w-6 h-6 fill-current" />
+              </div>
+              <span className="text-2xl font-bold text-white">VideoPro</span>
+            </div>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              Professional video editing services that bring your vision to life. 
+              Creating stunning visual content for brands worldwide.
+            </p>
+            <div className="flex items-center space-x-2 mb-2">
+              <div className="flex items-center space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-4 h-4 bg-accent-gold rounded-full" />
+                ))}
+              </div>
+              <span className="text-white font-semibold">4.9/5</span>
+            </div>
+            <p className="text-gray-400 text-sm">Level 2 Fiverr Seller • 500+ Projects</p>
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <h3 className="text-white font-bold text-lg mb-6">Quick Links</h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <motion.li
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.2 + index * 0.1 }}
+                >
+                  <a 
+                    href={link.href}
+                    className="text-gray-400 hover:text-primary transition-colors duration-300 block relative group"
+                  >
+                    {link.label}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="text-white font-bold text-lg mb-6">Services</h3>
+            <ul className="space-y-3">
+              {services.map((service, index) => (
+                <motion.li
+                  key={service}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  className="flex items-center space-x-2"
+                >
+                  <div className="w-1 h-1 bg-primary rounded-full" />
+                  <span className="text-gray-400">{service}</span>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <h3 className="text-white font-bold text-lg mb-6">Get In Touch</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-primary" />
+                <span className="text-gray-400">hello@videopro.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-primary" />
+                <span className="text-gray-400">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="text-gray-400">New York, USA</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="mt-6">
+              <h4 className="text-white font-semibold mb-4">Follow Me</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    className="w-10 h-10 bg-dark-card rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all duration-300"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Bottom Footer */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="border-t border-gray-800"
+      >
+        <div className="container mx-auto px-6 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © 2024 VideoPro. All rights reserved.
+            </div>
+            <div className="flex items-center space-x-6 text-sm">
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Back to Top Button */}
+      <motion.button
+        className="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-primary/25 transition-all duration-300 z-40"
+        whileHover={{ scale: 1.1, y: -2 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1 }}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M5 10l7-7m0 0l7 7m-7-7v18"
+          />
+        </svg>
+      </motion.button>
+    </footer>
+  );
+};
+
+export default Footer;
