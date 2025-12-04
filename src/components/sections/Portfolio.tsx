@@ -341,16 +341,6 @@ const Portfolio = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-400 mb-8">
-            Ready to bring your vision to life? Let&apos;s create something amazing together.
-          </p>
-          <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-full text-white font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Start Your Project
-          </motion.button>
         </motion.div>
       </div>
     </section>

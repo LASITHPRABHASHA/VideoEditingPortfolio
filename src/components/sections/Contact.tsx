@@ -4,6 +4,17 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { Mail, MessageCircle, Phone, MapPin, Send, Clock, Star, CheckCircle } from 'lucide-react';
+import {
+  SiFiverr,
+  SiUpwork,
+  SiUdemy,
+  SiCoursera,
+  SiAdobe,
+  SiYoutube,
+  SiNetflix,
+  SiVimeo,
+  SiGmail,
+} from 'react-icons/si';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -23,30 +34,9 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'hello@videopro.com',
-      description: 'Send me your project details'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      value: 'Available 9AM - 6PM EST',
-      description: 'Quick responses guaranteed'
-    },
-    {
-      icon: Phone,
-      title: 'WhatsApp',
-      value: '+1 (555) 123-4567',
-      description: 'For urgent inquiries'
-    },
-    {
-      icon: MapPin,
-      title: 'Based in',
-      value: 'New York, USA',
-      description: 'Working globally'
-    },
+    { icon: SiGmail, title: 'Gmail', value: 'hello@videopro.com', description: 'Primary email — expect a quick reply', color: '#EA4335' },
+    { icon: SiFiverr, title: 'Fiverr', value: 'fiverr.com/yourprofile', description: 'Hire me for packaged services', color: '#1DBF73' },
+    { icon: SiUpwork, title: 'Upwork', value: 'upwork.com/freelancers/~yourprofile', description: 'Available for long-term contracts', color: '#6FDA44' },
   ];
 
   const services = [
@@ -134,7 +124,11 @@ const Contact = () => {
                   whileHover={{ x: 10 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <info.icon className="w-6 h-6 text-white" />
+                    {info.color ? (
+                      <info.icon className="w-7 h-7" style={{ color: info.color }} />
+                    ) : (
+                      <info.icon className="w-6 h-6 text-white" />
+                    )}
                   </div>
                   <div>
                     <h4 className="text-white font-semibold text-lg">{info.title}</h4>
@@ -145,27 +139,6 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Quick Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.8 }}
-              className="glass rounded-2xl p-6 mt-8"
-            >
-              <h4 className="text-white font-semibold text-lg mb-4">Why Choose Me?</h4>
-              <div className="space-y-3">
-                {[
-                  { icon: Clock, text: '24h average response time' },
-                  { icon: Star, text: '4.9/5 average client rating' },
-                  { icon: CheckCircle, text: '500+ successful projects' },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <item.icon className="w-5 h-5 text-primary" />
-                    <span className="text-gray-300 text-sm">{item.text}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Contact Form */}
@@ -271,7 +244,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
+                  rows={3}
                   className="w-full px-4 py-3 bg-dark-lighter border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors resize-none"
                   placeholder="Tell me about your project, goals, and any specific requirements..."
                 />
@@ -281,7 +254,7 @@ const Contact = () => {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-lg text-white font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full px-2 py-2 bg-gray-700 rounded-lg text-white font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

@@ -15,6 +15,11 @@ const Hero = () => {
     return <div className="h-screen bg-dark" />;
   }
 
+  const navItems = [
+    { href: '#portfolio', label: 'Portfolio' },
+    { href: '#about', label: 'About' },
+  ];
+
   const stats = [
     { icon: Award, value: '500+', label: 'Projects Completed' },
     { icon: Users, value: '200+', label: 'Happy Clients' },
@@ -80,22 +85,25 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
           >
-            <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-full text-white font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 flex items-center space-x-3"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(255, 107, 53, 0.4)' }}
+
+            <motion.a
+              href="#portfolio"
+             className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-full text-white font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 flex items-center space-x-3 inline-flex"
+              whileHover={{ scale: 1.05, borderColor: 'rgba(255, 255, 255, 0.6)'  }}
               whileTap={{ scale: 0.95 }}
             >
               <Play className="w-6 h-6 fill-current" />
               <span>View My Work</span>
-            </motion.button>
-            
-            <motion.button
+            </motion.a>
+
+            <motion.a
+              href="#about"
               className="px-8 py-4 border-2 border-white/30 rounded-full text-white font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               whileHover={{ scale: 1.05, borderColor: 'rgba(255, 255, 255, 0.6)' }}
               whileTap={{ scale: 0.95 }}
             >
               Get in Touch
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Stats */}

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Play, Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { SiGmail, SiFiverr, SiUpwork } from 'react-icons/si';
 
 const Footer = () => {
   const [ref, inView] = useInView({
@@ -38,7 +39,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 border-t border-primary/10">
       {/* Main Footer */}
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-6 py-10 my-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Section */}
           <motion.div
@@ -50,9 +51,7 @@ const Footer = () => {
           >
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent-purple rounded-lg flex items-center justify-center">
-                <Play className="text-white w-6 h-6 fill-current" />
               </div>
-              <span className="text-2xl font-bold text-white">VideoPro</span>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6">
               Professional video editing services that bring your vision to life. 
@@ -64,9 +63,7 @@ const Footer = () => {
                   <div key={i} className="w-4 h-4 bg-accent-gold rounded-full" />
                 ))}
               </div>
-              <span className="text-white font-semibold">4.9/5</span>
             </div>
-            <p className="text-gray-400 text-sm">Level 2 Fiverr Seller • 500+ Projects</p>
           </motion.div>
 
           {/* Quick Links */}
@@ -127,22 +124,21 @@ const Footer = () => {
           >
             <h3 className="text-white font-bold text-lg mb-6">Get In Touch</h3>
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary" />
-                <span className="text-gray-400">hello@videopro.com</span>
+              <div className="flex items-center space-x-5">
+                <SiGmail className="w-7 h-7" style={{ color: '#EA4335' }} />
+                <a href="mailto:hello@videopro.com" className="text-gray-400 hover:text-primary">hello@videopro.com</a>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+              <div className="flex items-center space-x-5">
+                <SiFiverr className="w-7 h-7" style={{ color: '#1DBF73' }} />
+                <a href="https://fiverr.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">fiverr</a>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-gray-400">New York, USA</span>
+              <div className="flex items-center space-x-5">
+                <SiUpwork className="w-7 h-7" style={{ color: '#6FDA44' }} />
+                <a href="https://upwork.com/freelancers/~yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">upwork</a>
               </div>
             </div>
-
             {/* Social Links */}
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <h4 className="text-white font-semibold mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -160,7 +156,7 @@ const Footer = () => {
                   </motion.a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
@@ -172,23 +168,11 @@ const Footer = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
         className="border-t border-gray-800"
       >
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © 2024 VideoPro. All rights reserved.
+        <div className="container mx-auto px-6 py-6" >
+            <div className="text-gray-400 text-sm text-center">
+              © All rights reserved.
             </div>
-            <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                Cookie Policy
-              </a>
-            </div>
-          </div>
+           
         </div>
       </motion.div>
 

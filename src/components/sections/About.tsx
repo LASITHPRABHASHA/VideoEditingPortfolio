@@ -64,8 +64,20 @@ const About = () => {
           </p>
 
           {/* Profiles: Fiverr (Level 2) + Upwork (new) */}
-          <div className="mt-5 flex items-center justify-center gap-20 ">
-            <div className="flex items-center space-x-3">
+          <motion.div
+            className="mt-5 flex items-center justify-center gap-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div
+              className="flex items-center space-x-3"
+              whileHover={{ scale: 1.06, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.12 }}
+            >
               <SiFiverr className="w-20 h-20 text-green-400" aria-hidden />
               <div className="text-left">
                 <div className="text-sm text-gray-300">Fiverr</div>
@@ -79,10 +91,17 @@ const About = () => {
                   Level 2 Seller
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center space-x-3">
-              <SiUpwork className="w-15 h-15 text-emerald-400" aria-hidden />
+            <motion.div
+              className="flex items-center space-x-3"
+              whileHover={{ scale: 1.06, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.22 }}
+            >
+              <SiUpwork className="w-16 h-16 text-emerald-400" aria-hidden />
               <div className="text-left">
                 <div className="text-sm text-gray-300">Upwork</div>
                 <a
@@ -95,8 +114,8 @@ const About = () => {
                   Rising Talent
                 </a>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">

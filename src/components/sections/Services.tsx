@@ -29,7 +29,7 @@ const Services = () => {
     },
     {
       icon: Volume2,
-      title: 'Audio Post',
+      title: 'Audio Editing ',
       description: 'Crystal-clear audio editing, mixing, and sound design services.',
       features: ['Noise reduction', 'Audio sync', 'Music mixing', 'Sound effects'],
       price: 'Starting at $40',
@@ -62,8 +62,8 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-dark-lighter mx-auto">
-      <div className="container mx-auto px-6 w-full">
+    <section id="services" className="py-20 bg-gray-800 mx-auto">
+      <div className="container mx-auto w-full">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -80,7 +80,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -107,7 +107,7 @@ const Services = () => {
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
