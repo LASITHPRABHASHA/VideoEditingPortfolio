@@ -66,7 +66,7 @@ const Portfolio = () => {
       title: 'Company Film Reel',
       category: 'reels',
       thumbnail: '/portfolio/customer1.png',
-      videoUrl: 'https://youtu.be/4UJznPv7E10',
+      videoUrl: 'https://youtu.be/b6jldmLc0zo',
       description: 'Dynamic commercial showcasing innovative tech solutions with sleek animations.',
       duration: '2:30',
       views: '125K',
@@ -77,7 +77,7 @@ const Portfolio = () => {
       title: 'Real Estate Podcast',
       category: 'social',
       thumbnail: '/portfolio/customer2.png',
-      videoUrl: 'https://youtu.be/bmzYTsjH_4s',
+      videoUrl: 'https://youtu.be/ZaCSbQjLCTI',
       description: 'Viral-ready content optimized for social media engagement.',
       duration: '0:30',
       views: '89K'
@@ -87,7 +87,7 @@ const Portfolio = () => {
       title: 'NFT Promotion Video',
       category: 'documentary',
       thumbnail: '/portfolio/customer3.png',
-      videoUrl: '/videos/NFT Promo.mp4',
+      videoUrl: 'https://youtu.be/dQaUJcm46Cw',
       description: 'Compelling brand story with emotional narrative and stunning visuals.',
       duration: '8:45',
       views: '67K'
@@ -97,51 +97,51 @@ const Portfolio = () => {
       title: 'Corporate Explainer Reel',
       category: 'corporate',
       thumbnail: '/portfolio/customer4.png',
-      videoUrl: '/videos/Corporate Reel.mp4',
+      videoUrl: 'https://youtu.be/msSOXqrT2tc',
       description: 'Complex concepts simplified through engaging motion design.',
       duration: '3:15',
       views: '156K'
     },
     {
       id: 5,
-      title: 'E-commerce Product Launch',
-      category: 'commercial',
+      title: 'Meditation Course',
+      category: 'courses',
       thumbnail: '/portfolio/customer5.png',
-      videoUrl: '/videos/Meditation.mp4',
+      videoUrl: 'https://youtu.be/kfDegxD4tPc',
       description: 'High-converting product showcase with premium aesthetics.',
       duration: '1:45',
       views: '203K'
     },
     {
       id: 6,
-      title: 'TikTok Content Series',
-      category: 'social',
+      title: 'Business English Course',
+      category: 'courses',
       thumbnail: '/portfolio/customer6.png',
-      videoUrl: '/videos/Money Lesson.mp4',
+      videoUrl: 'https://youtu.be/bmzYTsjH_4s',
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '345K'
     },
-    {
-      id: 7,
-      title: 'Child Lesson on Values',
-      category: 'social',
-      thumbnail: '/portfolio/portfolio-6.jpg',
-      videoUrl: '/videos/Child Lesson.mp4',
-      description: 'Trend-focused content designed for maximum engagement.',
-      duration: '0:15',
-      views: '345K'
-    },
-    {
-      id: 8,
-      title: 'Drawing Lessons for Kids',
-      category: 'social',
-      thumbnail: '/portfolio/art1.png',
-      videoUrl: '/videos/Drawing Lesson.mp4',
-      description: 'Trend-focused content designed for maximum engagement.',
-      duration: '0:15',
-      views: '345K'
-    },
+    // {
+    //   id: 7,
+    //   title: 'Child Lesson on Values',
+    //   category: 'social',
+    //   thumbnail: '/portfolio/portfolio-6.jpg',
+    //   videoUrl: '/videos/Child Lesson.mp4',
+    //   description: 'Trend-focused content designed for maximum engagement.',
+    //   duration: '0:15',
+    //   views: '345K'
+    // },
+    // {
+    //   id: 8,
+    //   title: 'Drawing Lessons for Kids',
+    //   category: 'social',
+    //   thumbnail: '/portfolio/art1.png',
+    //   videoUrl: 'https://youtu.be/SUXHWbhHmvw',
+    //   description: 'Trend-focused content designed for maximum engagement.',
+    //   duration: '0:15',
+    //   views: '345K'
+    // },
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -231,7 +231,7 @@ const Portfolio = () => {
               whileHover={{ scale: 1.02, y: -5 }}
             >
               {/* Thumbnail */}
-              <div className="relative h-55 w-full rounded-t-2xl overflow-hidden bg-black">
+              <div className="relative h-65 w-full rounded-t-2xl overflow-hidden bg-black">
                 <Image
                   src={project.thumbnail}
                   alt={project.title}
@@ -252,14 +252,14 @@ const Portfolio = () => {
                 </div>
 
                 {/* Category Badge */}
-                <div className="absolute top-4 left-4 px-3 py-1 bg-primary/90 backdrop-blur-sm rounded-full text-white text-xs font-medium shadow-sm">
+                {/* <div className="absolute top-4 left-4 px-3 py-1 bg-primary/90 backdrop-blur-sm rounded-full text-white text-xs font-medium shadow-sm">
                   {project.category}
-                </div>
+                </div> */}
 
                 {/* Stats */}
-                <div className="absolute top-4 right-4 glass rounded-lg px-2 py-1">
+                {/* <div className="absolute top-4 right-4 glass rounded-lg px-2 py-1">
                   <span className="text-white text-xs">{project.duration}</span>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
@@ -277,8 +277,8 @@ const Portfolio = () => {
                     className="flex items-center space-x-2 text-primary hover:text-primary-light transition-colors"
                     whileHover={{ x: 5 }}
                   >
-                    <span className="text-sm">View Project</span>
-                    <ExternalLink className="w-4 h-4" />
+                    {/* <span className="text-sm">View Project</span> */}
+                    {/* <ExternalLink className="w-4 h-4" /> */}
                   </motion.button>
                 </div>
               </div>
@@ -324,7 +324,7 @@ const Portfolio = () => {
                     src={selectedVideo.videoUrl}
                     controls
                     autoPlay
-                    className="w-full h-full object-contain bg-black"
+                    className="w-full h-full bg-black"
                   />
                 )}
               </div>
