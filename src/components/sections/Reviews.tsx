@@ -401,7 +401,7 @@ const Reviews = () => {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-text-secondary mb-6">
+          <p className="text-lg text-text-secondary mt-30 mb-6">
             Ready to join my satisfied clients?
           </p>
           <motion.button

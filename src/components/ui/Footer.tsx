@@ -126,7 +126,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-5">
                 <SiGmail className="w-7 h-7" style={{ color: '#EA4335' }} />
-                <a href="mailto:hello@videopro.com" className="text-gray-400 hover:text-primary">hello@videopro.com</a>
+                <a href="lasithprabasha2530@gmail.com" className="text-gray-400 hover:text-primary">Gmail</a>
               </div>
               <div className="flex items-center space-x-5">
                 <SiFiverr className="w-7 h-7" style={{ color: '#1DBF73' }} />
