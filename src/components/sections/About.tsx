@@ -78,11 +78,19 @@ const About = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.12 }}
             >
-              <SiFiverr className="w-20 h-20 text-green-400" aria-hidden />
+              <a
+                href="https://www.fiverr.com/lasithprabasha"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Fiverr profile (opens in new tab)"
+                className="inline-flex"
+              >
+                <SiFiverr className="w-20 h-20 text-green-400" aria-hidden />
+              </a>
               <div className="text-left">
                 <div className="text-sm text-gray-300">Fiverr</div>
                 <a
-                  href="https://www.fiverr.com/your-username"
+                  href="https://www.fiverr.com/lasithprabasha"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary font-semibold"
@@ -101,18 +109,26 @@ const About = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.22 }}
             >
-              <SiUpwork className="w-16 h-16 text-emerald-400" aria-hidden />
+              <a
+                href="https://www.upwork.com/freelancers/lasithp4"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Upwork profile (opens in new tab)"
+                className="inline-flex"
+              >
+                <SiUpwork className="w-16 h-16 text-emerald-400" aria-hidden />
+              </a>
               <div className="text-left">
                 <div className="text-sm text-gray-300">Upwork</div>
                 <a
-                  href="https://www.upwork.com/freelancers/~your-username"
+                  href="https://www.upwork.com/freelancers/lasithp4"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary font-semibold"
                   aria-label="Upwork profile (opens in new tab)"
                 >
                   Rising Talent
-                </a>
+                </a> 
               </div>
             </motion.div>
           </motion.div>

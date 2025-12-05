@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
 import {
   SiFiverr,
   SiUpwork,
@@ -20,14 +21,15 @@ const Brands = () => {
   });
 
   const brands = [
-    { name: 'Fiverr',      Icon: SiFiverr,      color: '#1DBF73' },
-    { name: 'Upwork',      Icon: SiUpwork,      color: '#6FDA44' },
-    { name: 'Udemy',       Icon: SiUdemy,       color: '#EC5252' },
-    { name: 'Coursera',    Icon: SiCoursera,    color: '#2A73CC' },
-    { name: 'Adobe',       Icon: SiAdobe,       color: '#FF0000' },
-    { name: 'YouTube',     Icon: SiYoutube,     color: '#FF0000' },
-    { name: 'Netflix',     Icon: SiNetflix,     color: '#E50914' },
-    { name: 'Vimeo',       Icon: SiVimeo,       color: '#1AB7EA' },
+    { name: 'Fiverr', Icon: SiFiverr, color: '#1DBF73', type: 'icon' },
+    { name: 'Upwork', Icon: SiUpwork, color: '#6FDA44', type: 'icon' },
+    { name: 'Udemy', Icon: SiUdemy, color: '#EC5252', type: 'icon' },
+    { name: 'Coursera', Icon: SiCoursera, color: '#2A73CC', type: 'icon' },
+    { name: 'YouTube', Icon: SiYoutube, color: '#FF0000', type: 'icon' },
+    // Add your local brand images here
+    { name: 'Michelle', imageSrc: '/brands/brand1.png', type: 'image' },
+    { name: 'Dave', imageSrc: '/brands/brand2.png', type: 'image' },
+    { name: 'NatKitney', imageSrc: '/brands/brand3.png', type: 'image' },
   ];
 
   return (
@@ -47,21 +49,6 @@ const Brands = () => {
          
         </motion.div>
        
-          {brands.map((brand, index) => {
-            const Icon = brand.Icon;
-
-            return (
-              <motion.div
-                key={brand.name}
-                initial={{ opacity: 0, y: 60 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: index * 0.12 }}
-                whileHover={{ y: -20, scale: 1.1 }}
-                className="group relative"
-              >
-              </motion.div>
-            );
-          })}
 
         {/* Subtle Marquee (optional elegance) */}
         <motion.div
@@ -72,17 +59,25 @@ const Brands = () => {
         >
           <div className="flex animate-marquee whitespace-nowrap">
             {[...brands, ...brands].map((brand, i) => {
-              const Icon = brand.Icon;
               return (
                 <div key={i} className="mx-12 flex items-center">
-                  <Icon size={60} color={brand.color} className="opacity-90" />
+                  {brand.type === 'icon' ? (
+                    <brand.Icon size={60} color={brand.color} className="opacity-90" />
+                  ) : (
+                    <div className="relative w-15 h-15 grayscale opacity-70">
+                      <Image
+                        src={brand.imageSrc!}
+                        alt={`${brand.name} logo`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  )}
                 </div>
               );
             })}
           </div>
         </motion.div>
-
-      
       </div>
 
       {/* Custom marquee animation */}

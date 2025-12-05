@@ -30,36 +30,52 @@ const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const reviews: CustomerReview[] = [
-    {
+
+     {
       id: 1,
+      quote: "Professional and brought our brand story to life",
+      description: "The color grading and cinematic approach brought our brand story to life beautifully. Amazing work on our social media content! The videos are perfectly optimized for each platform.",
+      author: "Katie",
+      role: "Content Creator and Lecturer",
+      company: "Convo",
+      country: "🇺🇸",
+      avatar: "/Customers/customer6.png",
+      heroImage: "/Customers/customer6.png",
+      projectType: "Brand Documentary",
+      rating: 5,
+      videoUrl: "/videos/Meditation.mp4"
+    },
+
+    {
+      id: 2,
       quote: "Absolutely phenomenal work! Exceeded all expectations",
       description: "The video quality was outstanding and the turnaround time was impressive. Our engagement rates increased by 300% after using the videos. Professional, creative, and delivered exactly what we envisioned.",
-      author: "Sarah Johnson",
-      role: "Marketing Director",
-      company: "TechFlow Inc.",
+      author: "Hannah",
+      role: "Real Eastate Agent",
+      company: "",
       country: "🇺🇸",
-      avatar: "/Customers/customer1.png",
-      heroImage: "/Customers/customer1.png",
+      avatar: "/Customers/customer4.png",
+      heroImage: "/Customers/customer4.png",
       projectType: "Product Launch Campaign",
       rating: 5,
       videoUrl: "/videos/Film Reel.mp4"
     },
     {
-      id: 2,
+      id: 3,
       quote: "Game-changer for my YouTube channel",
       description: "Working with this editor transformed my content completely. The motion graphics and transitions are absolutely stunning. The attention to detail is incredible and every frame was carefully crafted.",
-      author: "Mike Chen",
+      author: "Mike",
       role: "Content Creator",
-      company: "Digital Nomad",
+      company: "",
       country: "🇨🇦",
-      avatar: "/Customers/customer2.png",
+      avatar: "/Customers/customer4.png",
       heroImage: "/Customers/customer2.png",
       projectType: "YouTube Series",
       rating: 5,
       videoUrl: "/videos/Money Lesson.mp4"
     },
     {
-      id: 3,
+      id: 4,
       quote: "Professional and brought our brand story to life",
       description: "The color grading and cinematic approach brought our brand story to life beautifully. Amazing work on our social media content! The videos are perfectly optimized for each platform.",
       author: "Emily Rodriguez",
@@ -72,20 +88,7 @@ const Reviews = () => {
       rating: 5,
       videoUrl: "/videos/Meditation.mp4"
     },
-     {
-      id: 3,
-      quote: "Professional and brought our brand story to life",
-      description: "The color grading and cinematic approach brought our brand story to life beautifully. Amazing work on our social media content! The videos are perfectly optimized for each platform.",
-      author: "Emily Rodriguez",
-      role: "Brand Manager",
-      company: "Lifestyle Co.",
-      country: "🇪🇸",
-      avatar: "/Customers/customer6.png",
-      heroImage: "/Customers/customer6.png",
-      projectType: "Brand Documentary",
-      rating: 5,
-      videoUrl: "/videos/Meditation.mp4"
-    },
+    
   ];
 
   const handlePrevious = () => {

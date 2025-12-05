@@ -52,12 +52,12 @@ const Portfolio = () => {
       icon: FaYoutube,
       color: 'text-red-500'
     },
-    { 
-      id: 'corporate', 
-      label: 'Corporate',
-      icon: FaBuilding,
-      color: 'text-amber-400'
-    },
+    // { 
+    //   id: 'corporate', 
+    //   label: 'Corporate',
+    //   icon: FaBuilding,
+    //   color: 'text-amber-400'
+    // },
   ];
 
   const projects = [
@@ -66,82 +66,72 @@ const Portfolio = () => {
       title: 'Company Film Reel',
       category: 'reels',
       thumbnail: '/portfolio/customer1.png',
-      videoUrl: 'https://youtu.be/b6jldmLc0zo',
+      videoUrl: 'https://idzwta0kj3aberar.public.blob.vercel-storage.com/Film%20Reel.mp4',
       description: 'Dynamic commercial showcasing innovative tech solutions with sleek animations.',
       duration: '2:30',
-      views: '125K',
+      views: '11K',
 
     },
     {
       id: 2,
-      title: 'Real Estate Podcast',
-      category: 'social',
+      title: 'Child Care Course For Parents',
+      category: 'course',
       thumbnail: '/portfolio/customer2.png',
       videoUrl: 'https://youtu.be/ZaCSbQjLCTI',
       description: 'Viral-ready content optimized for social media engagement.',
       duration: '0:30',
-      views: '89K'
+      views: '8K'
     },
     {
       id: 3,
-      title: 'NFT Promotion Video',
-      category: 'documentary',
-      thumbnail: '/portfolio/customer3.png',
-      videoUrl: 'https://youtu.be/dQaUJcm46Cw',
+      title: 'Real Estate Podcast',
+      category: 'commercial',
+      thumbnail: '/portfolio/customer4.png',
+      videoUrl: 'https://idzwta0kj3aberar.public.blob.vercel-storage.com/Podcast.mp4',
       description: 'Compelling brand story with emotional narrative and stunning visuals.',
       duration: '8:45',
-      views: '67K'
+      views: '6K'
     },
     {
       id: 4,
       title: 'Corporate Explainer Reel',
-      category: 'corporate',
+      category: 'reels',
       thumbnail: '/portfolio/customer4.png',
-      videoUrl: 'https://youtu.be/msSOXqrT2tc',
+      videoUrl: 'https://idzwta0kj3aberar.public.blob.vercel-storage.com/Corporate%20Reel.mp4',
       description: 'Complex concepts simplified through engaging motion design.',
       duration: '3:15',
-      views: '156K'
+      views: '15K'
     },
     {
       id: 5,
       title: 'Meditation Course',
       category: 'courses',
       thumbnail: '/portfolio/customer5.png',
-      videoUrl: 'https://youtu.be/kfDegxD4tPc',
+      videoUrl: 'https://idzwta0kj3aberar.public.blob.vercel-storage.com/Meditation.mp4',
       description: 'High-converting product showcase with premium aesthetics.',
       duration: '1:45',
-      views: '203K'
+      views: '2K'
     },
     {
       id: 6,
       title: 'Business English Course',
       category: 'courses',
       thumbnail: '/portfolio/customer6.png',
-      videoUrl: 'https://youtu.be/bmzYTsjH_4s',
+      videoUrl: 'https://idzwta0kj3aberar.public.blob.vercel-storage.com/Introduction%20Video.mp4',
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
-      views: '345K'
+      views: '5K'
     },
-    // {
-    //   id: 7,
-    //   title: 'Child Lesson on Values',
-    //   category: 'social',
-    //   thumbnail: '/portfolio/portfolio-6.jpg',
-    //   videoUrl: '/videos/Child Lesson.mp4',
-    //   description: 'Trend-focused content designed for maximum engagement.',
-    //   duration: '0:15',
-    //   views: '345K'
-    // },
-    // {
-    //   id: 8,
-    //   title: 'Drawing Lessons for Kids',
-    //   category: 'social',
-    //   thumbnail: '/portfolio/art1.png',
-    //   videoUrl: 'https://youtu.be/SUXHWbhHmvw',
-    //   description: 'Trend-focused content designed for maximum engagement.',
-    //   duration: '0:15',
-    //   views: '345K'
-    // },
+    {
+      id: 7,
+      title: 'Drawing Lessons for Kids',
+      category: 'commercial',
+      thumbnail: '/portfolio/customer3.png',
+      videoUrl: 'https://idzwta0kj3aberar.public.blob.vercel-storage.com/Drawing%20Lesson.mp4',
+      description: 'Trend-focused content designed for maximum engagement.',
+      duration: '0:15',
+      views: '3K'
+    },
   ];
 
   const filteredProjects = activeFilter === 'all' 
