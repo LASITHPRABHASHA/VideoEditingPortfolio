@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+import { IconType } from 'react-icons';
 import {
   SiFiverr,
   SiUpwork,
@@ -14,13 +15,29 @@ import {
   SiVimeo,
 } from 'react-icons/si';
 
+// Define proper types
+interface IconBrand {
+  name: string;
+  Icon: IconType;
+  color: string;
+  type: 'icon';
+}
+
+interface ImageBrand {
+  name: string;
+  imageSrc: string;
+  type: 'image';
+}
+
+type Brand = IconBrand | ImageBrand;
+
 const Brands = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  const brands = [
+  const brands: Brand[] = [
     { name: 'Fiverr', Icon: SiFiverr, color: '#1DBF73', type: 'icon' },
     { name: 'Upwork', Icon: SiUpwork, color: '#6FDA44', type: 'icon' },
     { name: 'Udemy', Icon: SiUdemy, color: '#EC5252', type: 'icon' },
@@ -64,9 +81,9 @@ const Brands = () => {
                   {brand.type === 'icon' ? (
                     <brand.Icon size={60} color={brand.color} className="opacity-90" />
                   ) : (
-                    <div className="relative w-15 h-15 grayscale opacity-70">
+                    <div className="relative w-20 h-25 grayscale opacity-70">
                       <Image
-                        src={brand.imageSrc!}
+                        src={brand.imageSrc}
                         alt={`${brand.name} logo`}
                         fill
                         className="object-contain"
