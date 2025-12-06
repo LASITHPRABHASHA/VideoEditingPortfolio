@@ -52,12 +52,6 @@ const Portfolio = () => {
       icon: FaYoutube,
       color: 'text-red-500'
     },
-    // { 
-    //   id: 'corporate', 
-    //   label: 'Corporate',
-    //   icon: FaBuilding,
-    //   color: 'text-amber-400'
-    // },
   ];
 
   const projects = [
@@ -70,12 +64,11 @@ const Portfolio = () => {
       description: 'Dynamic commercial showcasing innovative tech solutions with sleek animations.',
       duration: '2:30',
       views: '11K',
-
     },
     {
       id: 2,
       title: 'Child Care Course For Parents',
-      category: 'course',
+      category: 'courses',
       thumbnail: '/portfolio/customer2.png',
       videoUrl: 'https://youtu.be/ZaCSbQjLCTI',
       description: 'Viral-ready content optimized for social media engagement.',
@@ -96,7 +89,7 @@ const Portfolio = () => {
       id: 4,
       title: 'Corporate Explainer Reel',
       category: 'reels',
-      thumbnail: '/portfolio/customer4.png',
+      thumbnail: '/portfolio/customer7.png',
       videoUrl: 'https://idzwta0kj3aberar.public.blob.vercel-storage.com/Corporate%20Reel.mp4',
       description: 'Complex concepts simplified through engaging motion design.',
       duration: '3:15',
@@ -240,16 +233,6 @@ const Portfolio = () => {
                     <Play className="w-8 h-8 text-white fill-current ml-1" />
                   </motion.button>
                 </div>
-
-                {/* Category Badge */}
-                {/* <div className="absolute top-4 left-4 px-3 py-1 bg-primary/90 backdrop-blur-sm rounded-full text-white text-xs font-medium shadow-sm">
-                  {project.category}
-                </div> */}
-
-                {/* Stats */}
-                {/* <div className="absolute top-4 right-4 glass rounded-lg px-2 py-1">
-                  <span className="text-white text-xs">{project.duration}</span>
-                </div> */}
               </div>
 
               {/* Content */}
@@ -263,13 +246,6 @@ const Portfolio = () => {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-gray-500 text-xs">{project.views} views</span>
-                  <motion.button
-                    className="flex items-center space-x-2 text-primary hover:text-primary-light transition-colors"
-                    whileHover={{ x: 5 }}
-                  >
-                    {/* <span className="text-sm">View Project</span> */}
-                    {/* <ExternalLink className="w-4 h-4" /> */}
-                  </motion.button>
                 </div>
               </div>
             </motion.div>
@@ -304,7 +280,7 @@ const Portfolio = () => {
                 {modalYouTubeId ? (
                   <iframe
                     className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${modalYouTubeId}?autoplay=1&rel=0`}
+                    src={`https://www.youtube.com/embed/${modalYouTubeId}?autoplay=1&rel=0&modestbranding=1`}
                     title={selectedVideo.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
@@ -314,8 +290,14 @@ const Portfolio = () => {
                     src={selectedVideo.videoUrl}
                     controls
                     autoPlay
+                    controlsList="nodownload nofullscreen noremoteplayback"
+                    disablePictureInPicture
                     className="w-full h-full bg-black"
-                  />
+                    onContextMenu={(e) => e.preventDefault()} // Disable right-click
+                    style={{ pointerEvents: 'auto' }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
                 )}
               </div>
 
@@ -323,15 +305,6 @@ const Portfolio = () => {
             </motion.div>
           </motion.div>
         )}
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-16"
-        >
-        </motion.div>
       </div>
     </section>
   );
