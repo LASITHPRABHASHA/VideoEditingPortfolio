@@ -113,7 +113,7 @@ const Reviews = () => {
   ];
 
   return (
-    <section id="reviews" className="py-20  ">
+    <section id="reviews" className="py-20 px-5 ">
       <div className="container mx-auto">
         {/* Header */}
         <motion.div

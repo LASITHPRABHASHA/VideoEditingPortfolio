@@ -13,7 +13,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lasith Prabasha - Professional Video Editor | Level 2 Fiverr Expert",
+  title: "Lasith Prabasha - Professional Video Editor",
   description: "Official portfolio website of Lasith Prabasha. Professional video editor specializing in cinematic content, motion graphics, and premium post-production. Level 2 Fiverr seller with 5+ years experience.",
   keywords: "Lasith Prabasha, online course editor, course editor, video editing, motion graphics, premiere pro, after effects, davinci resolve, fiverr, professional editor, video production",
   authors: [{ name: "Lasith Prabasha" }],

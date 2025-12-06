@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-800 border-t border-primary/10">
+    <footer className="bg-gray-900 border-t border-primary/10">
       {/* Main Footer */}
       <div className="container mx-auto px-6 py-10 my-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -170,7 +170,7 @@ const Footer = () => {
       >
         <div className="container mx-auto px-6 py-6" >
             <div className="text-gray-400 text-sm text-center">
-              © All rights reserved.
+              ©2025 All rights reserved.
             </div>
            
         </div>

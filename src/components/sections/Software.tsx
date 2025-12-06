@@ -49,13 +49,12 @@ const Software = () => {
       icon: SiAdobeaudition,
       color: '#00A79D',
     },
-
   ];
 
   return (
-    <section id="software" className="py-20 bg-dark-lighter mx-auto">
-      <div className="container mx-auto px-6 w-full">
-        {/* Header - Identical to Services */}
+    <section id="software" className="py-20 bg-dark-lighter">
+      <div className="container mx-auto px-6">
+        {/* Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -72,18 +71,16 @@ const Software = () => {
           </p>
         </motion.div>
 
-        {/* Grid - EXACT same as Services */}
-        <div className="flex flex-1 gap-1">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {software.map((tool, index) => {
-            const Icon = tool.icon;
-
             return (
               <motion.div
                 key={tool.name}
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group mx-auto relative bg-dark-card rounded-2xl p-8 hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent-purple/5 transition-all duration-300 border border-transparent hover:border-primary/20"
+                className="group relative bg-dark-card rounded-2xl p-4 md:p-8 hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent-purple/5 transition-all duration-300 border border-transparent hover:border-primary/20"
                 whileHover={{ scale: 1.02, y: -5 }}
               >
                 {/* Background Gradient */}
@@ -91,42 +88,34 @@ const Software = () => {
 
                 {/* Content */}
                 <div className="relative z-10 text-center">
-                  {/* Large Centered Image (replaces icon) */}
+                  {/* Large Centered Image */}
                   <motion.div
-                    className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-primary/20 to-accent-purple/20 rounded-2xl flex items-center justify-center overflow-hidden"
+                    className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 bg-gradient-to-br from-primary/20 to-accent-purple/20 rounded-2xl flex items-center justify-center overflow-hidden"
                     whileHover={{ rotate: 10, scale: 1.1 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
-                    <div className="w-24 h-24 relative">
+                    <div className="w-12 h-12 md:w-20 md:h-20 relative">
                       <Image
                         src={tool.src}
                         alt={tool.name}
-                        width={120}
-                        height={120}
+                        fill
                         className="object-contain"
                       />
                     </div>
                   </motion.div>
 
                   {/* Title & Category */}
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-sm md:text-xl font-bold text-white mb-1 md:mb-2 group-hover:text-primary transition-colors">
                     {tool.name}
                   </h3>
-                  <p className="text-primary text-sm font-medium mb-4">
+                  <p className="text-primary text-xs md:text-sm font-medium">
                     {tool.category}
                   </p>
-
-                  {/* Description */}
-                  {/* <p className="text-gray-400 text-sm leading-relaxed">
-                    {tool.description}
-                  </p> */}
                 </div>
               </motion.div>
             );
           })}
         </div>
-
-        {/* Optional: Add a subtle CTA or Process section later if needed */}
       </div>
     </section>
   );
