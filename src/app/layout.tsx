@@ -19,6 +19,16 @@ export const metadata: Metadata = {
   authors: [{ name: "Lasith Prabasha" }],
   creator: "Lasith Prabasha",
   metadataBase: new URL('https://lasithprabasha.com'),
+   // Add favicon configuration
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: "Lasith Prabasha - Professional Video Editor Portfolio",
     description: "Award-winning video editor with 5+ years experience creating stunning visual content",
@@ -55,6 +65,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Lasith Prabasha",
               "url": "https://lasithprabasha.com",
+              "image": "https://lasithprabasha.com/images/lasith-prabasha-profile.jpg",
               "jobTitle": "Professional Video Editor",
               "description": "Level 2 Fiverr seller specializing in video editing, motion graphics, and post-production services",
               "sameAs": [
