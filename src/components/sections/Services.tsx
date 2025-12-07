@@ -62,7 +62,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-800 mx-auto">
+    <section id="services" className="py-20 bg-[#E7F2EF] mx-auto">
       <div className="container mx-auto w-full">
         <motion.div
           ref={ref}
@@ -71,7 +71,7 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-[#19183B] mb-6">
             My <span className="text-primary">Services</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -103,7 +103,7 @@ const Services = () => {
                   <service.icon className={`w-30 h-30 ${service.colorClass}`} aria-hidden />
                 </motion.div>
 
-                <h3 className="text-2xl text-center font-bold text-white mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl text-center font-bold text-[#19183B] mb-4 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
                 
@@ -150,7 +150,7 @@ const Services = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-20 text-center"
         >
-          <h3 className="text-3xl font-bold text-white mb-12">
+          <h3 className="text-3xl font-bold text-[#19183B] mb-12">
             My <span className="text-primary">Process</span>
           </h3>
           
@@ -168,8 +168,8 @@ const Services = () => {
                 transition={{ delay: 1 + index * 0.2 }}
                 className="relative"
               >
-                <div className="text-6xl font-bold text-primary/20 mb-4">{item.step}</div>
-                <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
+                <div className="text-6xl font-bold text-[#19183B] mb-4">{item.step}</div>
+                <h4 className="text-xl font-semibold text-[#708993] mb-2">{item.title}</h4>
                 <p className="text-gray-400 text-sm">{item.desc}</p>
                 
                 {/* Connector */}
@@ -189,7 +189,7 @@ const Services = () => {
           className="text-center mt-16"
         >
           <div className="glass rounded-3xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-2xl font-bold text-[#19183B] mb-4">
               Ready to Start Your Project?
             </h3>
             <p className="text-gray-400 mb-6">

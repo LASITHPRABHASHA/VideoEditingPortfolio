@@ -46,7 +46,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-800">
+    <section id="about" className="py-20 bg-[#E7F2EF]">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -55,10 +55,10 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            About <span className="text-primary">Me</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-[#19183B] mb-6">
+            About <span className="text-[#19183B]">Me</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-[#708993] max-w-3xl mx-auto">
             Passionate video editor with over 5 years of experience creating compelling visual stories 
             that captivate audiences and drive results.
           </p>
@@ -85,15 +85,15 @@ const About = () => {
                 aria-label="Fiverr profile (opens in new tab)"
                 className="inline-flex"
               >
-                <SiFiverr className="w-20 h-20 text-green-400" aria-hidden />
+                <SiFiverr className="w-20 h-20 text-green-500" aria-hidden />
               </a>
               <div className="text-left">
-                <div className="text-sm text-gray-300">Fiverr</div>
+                <div className="text-sm text-[#708993]">Fiverr</div>
                 <a
                   href="https://www.fiverr.com/lasithprabasha"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-semibold"
+                  className="text-[#19183B] font-semibold"
                   aria-label="Fiverr profile (opens in new tab)"
                 >
                   Level 2 Seller
@@ -116,15 +116,15 @@ const About = () => {
                 aria-label="Upwork profile (opens in new tab)"
                 className="inline-flex"
               >
-                <SiUpwork className="w-16 h-16 text-emerald-400" aria-hidden />
+                <SiUpwork className="w-16 h-16 text-green-600" aria-hidden />
               </a>
               <div className="text-left">
-                <div className="text-sm text-gray-300">Upwork</div>
+                <div className="text-sm text-[#708993]">Upwork</div>
                 <a
                   href="https://www.upwork.com/freelancers/lasithp4"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-semibold"
+                  className="text-[#19183B] font-semibold"
                   aria-label="Upwork profile (opens in new tab)"
                 >
                   Rising Talent
@@ -143,7 +143,7 @@ const About = () => {
             className="relative"
           >
             <div className="relative">
-              <div className="w-full h-130 bg-gradient-to-br from-primary/20 to-accent-purple/20 rounded-3xl overflow-hidden">
+              <div className="w-full h-130 bg-gradient-to-br from-[#A1C2BD]/20 to-[#708993]/20 rounded-3xl overflow-hidden">
                 <Image
                   src="/Gemini_Generated_Image_eyx4feeyx4feeyx4 (1).png"
                   alt="Professional Video Editor"
@@ -153,9 +153,8 @@ const About = () => {
               </div>
               
               {/* Floating elements */}
-              
-              <div className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 animate-float" style={{ animationDelay: '2s' }}>
-                <div className="text-primary font-bold text-xl">300+</div>
+              <div className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 animate-float bg-white/90 border border-[#A1C2BD]/30" style={{ animationDelay: '2s' }}>
+                <div className="text-white font-bold text-xl">300+</div>
                 <div className="text-white text-sm">Projects</div>
               </div>
             </div>
@@ -169,15 +168,15 @@ const About = () => {
             className="space-y-3"
           >
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4 mt-0">
+              <h3 className="text-3xl font-bold text-[#19183B] mb-4 mt-0">
                 Crafting Visual Excellence Since 2019
               </h3>
-              <p className="text-gray-400 text-lg leading-relaxed mb-6">
+              <p className="text-[#708993] text-lg leading-relaxed mb-6">
                 As a Level 2 Fiverr seller and passionate video editor, I specialize in transforming 
                 raw footage into compelling visual narratives. My expertise spans across various 
                 industries, from corporate content to creative storytelling.
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <p className="text-[#708993] text-lg leading-relaxed">
                 I believe in the power of visual storytelling to connect, inspire, and drive action. 
                 Every frame is carefully crafted to serve your message and engage your audience.
               </p>
@@ -185,7 +184,7 @@ const About = () => {
 
             {/* Skills Grid */}
             <div>
-              <h4 className="text-xl font-semibold text-white mb-4">Core Expertise</h4>
+              <h4 className="text-xl font-semibold text-[#19183B] mb-4">Core Expertise</h4>
               <div className="grid grid-cols-2 gap-3">
                 {skills.map((skill, index) => (
                   <motion.div
@@ -195,8 +194,8 @@ const About = () => {
                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{skill}</span>
+                    <CheckCircle className="w-5 h-5 text-[#A1C2BD] flex-shrink-0" />
+                    <span className="text-[#19183B] text-sm">{skill}</span>
                   </motion.div>
                 ))}
               </div>
@@ -213,8 +212,8 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-20"
         >       
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            My <span className="text-primary">Values</span>
+          <h3 className="text-3xl font-bold text-[#19183B] text-center mb-12">
+            My <span className="text-[#19183B]">Values</span>
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -224,12 +223,12 @@ const About = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1 + index * 0.2 }}
-                className="glass rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300"
+                className="glass rounded-2xl p-8 text-center hover:bg-[#A1C2BD]/10 transition-all duration-300 bg-white/50 border border-[#A1C2BD]/30"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <value.icon className={`w-12 h-12 mx-auto mb-4 ${value.colorClass}`} aria-hidden />
-                <h4 className="text-xl font-semibold text-white mb-3">{value.title}</h4>
-                <p className="text-gray-400">{value.description}</p>
+                <h4 className="text-xl font-semibold text-[#19183B] mb-3">{value.title}</h4>
+                <p className="text-[#708993]">{value.description}</p>
               </motion.div>
             ))}
           </div>

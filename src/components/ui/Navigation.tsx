@@ -55,7 +55,7 @@ const Navigation = () => {
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:text-primary transition-colors duration-300 relative group"
+                className="text-white hover:text-primary transition-colors duration-300 relative group"
                 whileHover={{ y: -2 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

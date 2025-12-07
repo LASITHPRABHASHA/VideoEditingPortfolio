@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #061718;
-  --foreground: #ededed;
+  --background: #E7F2EF;
+  --foreground: #19183B;
+  --text-secondary: #708993;
+  --accent: #A1C2BD;
 }
 
 /* Custom scrollbar */
@@ -11,16 +13,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #E7F2EF;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f2dfd8;
+  background: #A1C2BD;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #958b87;
+  background: #708993;
 }
 
 /* Smooth scrolling */
@@ -30,20 +32,31 @@ html {
 
 /* Custom selection color */
 ::selection {
-  background-color: rgba(255, 107, 53, 0.3);
-  color: #ffffff;
+  background-color: rgba(161, 194, 189, 0.4);
+  color: #19183B;
 }
 
 /* Video background overlay */
 .video-overlay {
-  background: linear-gradient(135deg, rgba(14, 14, 14, 0.8), rgba(46, 59, 97, 0.6));
+  background: linear-gradient(135deg, rgba(231, 242, 239, 0.9), rgba(161, 194, 189, 0.7));
 }
 
 /* Glassmorphism effect */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(161, 194, 189, 0.15);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(112, 137, 147, 0.2);
+}
+
+/* Card backgrounds */
+.card-light {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(161, 194, 189, 0.3);
+}
+
+.card-accent {
+  background: rgba(161, 194, 189, 0.1);
+  border: 1px solid rgba(161, 194, 189, 0.4);
 }
 
 /* Loading animation */
@@ -54,8 +67,54 @@ html {
 
 .shimmer {
   animation: shimmer 1.5s ease-in-out infinite;
-  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+  background: linear-gradient(90deg, #E7F2EF 0%, #A1C2BD 50%, #E7F2EF 100%);
   background-size: 400% 100%;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Button styles using your palette */
+.btn-primary {
+  background-color: #19183B;
+  color: #E7F2EF;
+  border: 1px solid #19183B;
+}
+
+.btn-primary:hover {
+  background-color: #708993;
+  border-color: #708993;
+}
+
+.btn-secondary {
+  background-color: #A1C2BD;
+  color: #19183B;
+  border: 1px solid #A1C2BD;
+}
+
+.btn-secondary:hover {
+  background-color: #708993;
+  color: #E7F2EF;
+}
+
+/* Text utilities */
+.text-primary {
+  color: #19183B;
+}
+
+.text-secondary {
+  color: #708993;
+}
+
+.text-accent {
+  color: #A1C2BD;
 }
 
 body {

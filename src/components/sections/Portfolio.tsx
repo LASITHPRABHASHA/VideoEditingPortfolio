@@ -32,7 +32,7 @@ const Portfolio = () => {
       id: 'all', 
       label: 'All Projects',
       icon: FaThLarge,
-      color: 'text-cyan-400'
+      color: 'text-red-400'
     },
     { 
       id: 'reels', 
@@ -152,7 +152,7 @@ const Portfolio = () => {
   const modalYouTubeId = selectedVideo ? getYouTubeId(selectedVideo.videoUrl) : null;
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-900">
+    <section id="portfolio" className="py-20 bg-[#E7F2EF]">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -161,10 +161,10 @@ const Portfolio = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            My <span className="text-primary">Portfolio</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-[#19183B] mb-6">
+            My <span className="text-[#19183B]">Portfolio</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-[#708993] max-w-3xl mx-auto mb-12">
             Explore a collection of my finest work, showcasing diverse styles and 
             cutting-edge techniques across various industries.
           </p>
@@ -179,8 +179,8 @@ const Portfolio = () => {
                   onClick={() => setActiveFilter(filter.id)}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
                     activeFilter === filter.id
-                      ? 'bg-primary text-white shadow-lg shadow-primary/30 border border-primary/50'
-                      : 'bg-surface/80 backdrop-blur-sm text-gray-300 hover:text-white hover:bg-primary/20 border border-border hover:border-primary/30'
+                      ? 'bg-primary text-[#19183B] shadow-lg shadow-primary/30 border border-primary/50'
+                      : 'bg-surface/80 backdrop-blur-sm text-[#19183B] hover:text-white hover:bg-primary/20 border border-border hover:border-primary/30'
                   }`}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -237,7 +237,7 @@ const Portfolio = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-[#19183B] mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-gray-400 text-sm mb-4 line-clamp-2">
@@ -301,7 +301,7 @@ const Portfolio = () => {
                 )}
               </div>
 
-              <p className="text-gray-400">{selectedVideo.description}</p>
+              <p className="text-white">{selectedVideo.description}</p>
             </motion.div>
           </motion.div>
         )}

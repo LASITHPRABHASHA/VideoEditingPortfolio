@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 border-t border-primary/10">
+    <footer className="bg-[#708993] border-t border-primary/10">
       {/* Main Footer */}
       <div className="container mx-auto px-6 py-10 my-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -53,7 +53,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent-purple rounded-lg flex items-center justify-center">
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-white leading-relaxed mb-6">
               Professional video editing services that bring your vision to life. 
               Creating stunning visual content for brands worldwide.
             </p>
@@ -83,7 +83,7 @@ const Footer = () => {
                 >
                   <a 
                     href={link.href}
-                    className="text-gray-400 hover:text-primary transition-colors duration-300 block relative group"
+                    className="text-white hover:text-primary transition-colors duration-300 block relative group"
                   >
                     {link.label}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
@@ -110,7 +110,7 @@ const Footer = () => {
                   className="flex items-center space-x-2"
                 >
                   <div className="w-1 h-1 bg-primary rounded-full" />
-                  <span className="text-gray-400">{service}</span>
+                  <span className="text-white">{service}</span>
                 </motion.li>
               ))}
             </ul>
@@ -126,15 +126,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-5">
                 <SiGmail className="w-7 h-7" style={{ color: '#EA4335' }} />
-                <a href="lasithprabasha2530@gmail.com" className="text-gray-400 hover:text-primary">Gmail</a>
+                <a href="lasithprabasha2530@gmail.com" className="text-white hover:text-primary">Gmail</a>
               </div>
               <div className="flex items-center space-x-5">
                 <SiFiverr className="w-7 h-7" style={{ color: '#1DBF73' }} />
-                <a href="https://fiverr.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">fiverr</a>
+                <a href="https://fiverr.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary">fiverr</a>
               </div>
               <div className="flex items-center space-x-5">
                 <SiUpwork className="w-7 h-7" style={{ color: '#6FDA44' }} />
-                <a href="https://upwork.com/freelancers/~yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">upwork</a>
+                <a href="https://upwork.com/freelancers/~yourprofile" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary">upwork</a>
               </div>
             </div>
             {/* Social Links */}
@@ -169,7 +169,7 @@ const Footer = () => {
         className="border-t border-gray-800"
       >
         <div className="container mx-auto px-6 py-6" >
-            <div className="text-gray-400 text-sm text-center">
+            <div className="text-white text-sm text-center">
               ©2025 All rights reserved.
             </div>
            

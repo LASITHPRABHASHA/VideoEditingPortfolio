@@ -39,7 +39,10 @@ const Hero = () => {
         >
           <source src="/videos/hero.webm" type="video/webm" />
         </video>
-        <div className="absolute inset-0 video-overlay" />
+        {/* Video Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#19183B]/80 via-[#708993]/20 to-[#A1C2BD]/40" />
+        {/* Alternative: Simple dark overlay */}
+        {/* <div className="absolute inset-0 bg-[#19183B]/70" /> */}
       </div>
 
       {/* 3D Background Elements */}

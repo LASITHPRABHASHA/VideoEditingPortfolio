@@ -123,8 +123,8 @@ const Reviews = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-sm text-accent mb-4 font-medium tracking-wide uppercase">
-            Level 2 Fiverr Seller • 200+ Projects Completed
+          <p className="text-md text-[#708993] mb-4 font-medium tracking-wide uppercase">
+            Level 2 Fiverr Seller • 300+ Projects Completed
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             What my clients
@@ -192,7 +192,7 @@ const Reviews = () => {
             </div>
             
             {/* Quote Section - Left Side Overlapping */}
-            <div className="absolute left-20 mt-50 top-1/2 transform -translate-y-1/2 z-10 bg-surface/95 backdrop-blur-lg border border-border p-12 rounded-2xl shadow-2xl w-[500px] h-[400px] flex flex-col justify-center">
+            <div className="absolute left-20 mt-50 top-1/2 transform -translate-y-1/2 z-10 bg-[#E7F2EF] border border-border p-12 rounded-2xl shadow-2xl w-[500px] h-[400px] flex flex-col justify-center">
               <div className="space-y-6">
                 {/* Quote Icon */}
                 {/* <Quote className="text-primary w-10 h-10 opacity-30" /> */}
@@ -200,15 +200,15 @@ const Reviews = () => {
                 {/* Stars */}
                 <div className="flex items-center space-x-1">
                   {[...Array(currentReview.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 text-accent fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
 
-                <blockquote className="text-2xl font-bold text-foreground leading-tight">
-                  "{currentReview.quote}"
+                <blockquote className="text-2xl font-bold text-[#19183B] leading-tight">
+                  {currentReview.quote}
                 </blockquote>
                 
-                <p className="text-text-secondary text-sm leading-relaxed">
+                <p className="text-[#708993] text-sm leading-relaxed">
                   {currentReview.description}
                 </p>
 
@@ -320,7 +320,7 @@ const Reviews = () => {
               <Quote className="text-primary w-8 h-8 opacity-30" />
               
               {/* Stars */}
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-1 text-yellow-400">
                 {[...Array(currentReview.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-accent fill-current" />
                 ))}
@@ -405,7 +405,7 @@ const Reviews = () => {
             Ready to join my satisfied clients?
           </p>
           <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-full text-white font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+            className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-full text-[#19183B] font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
