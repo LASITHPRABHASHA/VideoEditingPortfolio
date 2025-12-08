@@ -85,7 +85,7 @@ const About = () => {
                 aria-label="Fiverr profile (opens in new tab)"
                 className="inline-flex"
               >
-                <SiFiverr className="w-20 h-20 text-green-500" aria-hidden />
+                <SiFiverr className="w-25 h-25 text-green-500" aria-hidden />
               </a>
               <div className="text-left">
                 <div className="text-sm text-[#708993]">Fiverr</div>
