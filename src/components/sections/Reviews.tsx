@@ -88,6 +88,21 @@ const Reviews = () => {
       rating: 5,
       videoUrl: "/videos/Meditation.mp4"
     },
+    {
+    id: 5,
+    quote: "Transformed my passion into a beautiful learning experience",
+    description: "The video editing for my flower decoration course was absolutely stunning! The close-up shots, smooth transitions, and beautiful color grading made each arrangement look magazine-quality. My students love how clear and engaging the tutorials are. The way you captured the delicate details of each petal and arrangement technique was masterful.",
+    author: "Alaina",
+    role: "Floral Designer & Course Creator",
+    company: "Bloom Academy",
+    country: "🇺🇸",
+    avatar: "/Customers/customer3.png",
+    heroImage: "/Customers/customer10.png",
+    projectType: "Educational Course",
+    rating: 5,
+    videoUrl: "/videos/FlowerCourse.mp4"
+  },
+    
     
   ];
 

@@ -145,6 +145,16 @@ const Portfolio = () => {
       duration: '0:15',
       views: '3K'
     },
+     {
+      id: 10,
+      title: 'Flower Decoration Course',
+      category: 'courses',
+      thumbnail: '/portfolio/customer10.png',
+      videoUrl: 'https://youtu.be/Z3fvaLyAQA0',
+      description: 'Trend-focused content designed for maximum engagement.',
+      duration: '0:15',
+      views: '12K'
+    },
     
   ];
 

@@ -96,7 +96,7 @@ const About = () => {
                   className="text-[#19183B] font-semibold"
                   aria-label="Fiverr profile (opens in new tab)"
                 >
-                  Level 2 Seller
+                  Top Rated Seller
                 </a>
               </div>
             </motion.div>
