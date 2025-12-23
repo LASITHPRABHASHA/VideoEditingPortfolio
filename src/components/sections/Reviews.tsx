@@ -96,7 +96,7 @@ const Reviews = () => {
     role: "Floral Designer & Course Creator",
     company: "Bloom Academy",
     country: "🇺🇸",
-    avatar: "/Customers/customer3.png",
+    avatar: "/Customers/customer10.png",
     heroImage: "/Customers/customer10.png",
     projectType: "Educational Course",
     rating: 5,
