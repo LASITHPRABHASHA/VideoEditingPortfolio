@@ -110,7 +110,7 @@ const Portfolio = () => {
       title: 'Business English Course',
       category: 'courses',
       thumbnail: '/portfolio/customer6.png',
-      videoUrl: 'https://youtu.be/bmzYTsjH_4s',
+      videoUrl: 'https://youtu.be/vGiOJSA89kw',
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '5K'
