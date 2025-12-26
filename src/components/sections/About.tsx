@@ -101,7 +101,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.06, y: -5 }}
               whileTap={{ scale: 0.98 }}
@@ -121,7 +121,7 @@ const About = () => {
               <div className="text-left">
                 <div className="text-sm text-[#708993]">Upwork</div>
                 <a
-                  href="https://www.upwork.com/freelancers/lasithp4"
+                  href="https://www.upwork.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#19183B] font-semibold"
@@ -130,7 +130,7 @@ const About = () => {
                   Rising Talent
                 </a> 
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
 
