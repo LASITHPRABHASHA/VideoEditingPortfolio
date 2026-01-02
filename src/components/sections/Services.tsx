@@ -110,34 +110,7 @@ const Services = () => {
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
-                {/* Features */}
-                {/* <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <motion.div
-                      key={feature}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={inView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ delay: index * 0.1 + idx * 0.1 }}
-                      className="flex items-center space-x-3"
-                    >
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-gray-300 text-sm">{feature}</span>
-                    </motion.div>
-                  ))}
-                </div> */}
-
-                {/* Price */}
-                {/* <div className="flex items-center justify-between pt-4 border-t border-gray-700">
-                  <span className="text-primary font-bold text-lg">{service.price}</span>
-                  <motion.button
-                    className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Get Quote
-                  </motion.button>
-                </div> */}
+                
               </div>
             </motion.div>
           ))}
@@ -196,7 +169,7 @@ const Services = () => {
               Get a custom quote based on your specific needs and timeline.
             </p>
             <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-full text-white font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-full shadow-lg text-gray font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

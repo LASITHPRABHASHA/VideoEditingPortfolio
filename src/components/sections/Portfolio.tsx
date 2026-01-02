@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import { Play, ExternalLink } from 'lucide-react';
-import { FaThLarge, FaFilm, FaGraduationCap, FaYoutube, FaBuilding } from 'react-icons/fa';
+import { Play} from 'lucide-react';
+import { FaThLarge, FaFilm, FaGraduationCap, FaYoutube,} from 'react-icons/fa';
 import Image from 'next/image';
 
 interface Project {
@@ -154,6 +154,26 @@ const Portfolio = () => {
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '12K'
+    },
+     {
+      id: 11,
+      title: 'Website Development Course',
+      category: 'commercial',
+      thumbnail: '/portfolio/customer11.png',
+      videoUrl: 'https://youtu.be/xtoTSCbgDqQ',
+      description: 'Trend-focused content designed for maximum engagement.',
+      duration: '0:15',
+      views: '2K'
+    },
+     {
+      id: 12,
+      title: 'Yoga for Beginners Course',
+      category: 'courses',
+      thumbnail: '/portfolio/customer12.png',
+      videoUrl: 'https://youtu.be/75s6xC6HM7k',
+      description: 'Trend-focused content designed for maximum engagement.',
+      duration: '0:15',
+      views: '6K'
     },
     
   ];

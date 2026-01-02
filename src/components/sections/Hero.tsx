@@ -35,12 +35,12 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover overla"
         >
           <source src="/videos/hero.webm" type="video/webm" />
         </video>
         {/* Video Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#19183B]/80 via-[#708993]/20 to-[#A1C2BD]/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#19183B]/30 via-[#708993]/20 to-[#A1C2BD]/40" />
         {/* Alternative: Simple dark overlay */}
         {/* <div className="absolute inset-0 bg-[#19183B]/70" /> */}
       </div>
@@ -73,7 +73,7 @@ const Hero = () => {
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-100 mb-12 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
