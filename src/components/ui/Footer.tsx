@@ -124,14 +124,14 @@ const Footer = () => {
           >
             <h3 className="text-white font-bold text-lg mb-6">Get In Touch</h3>
             <div className="space-y-4">
-              <div className="flex items-center space-x-5">
+              {/* <div className="flex items-center space-x-5">
                 <SiGmail className="w-7 h-7" style={{ color: '#EA4335' }} />
                 <a href="lasithprabasha2530@gmail.com" className="text-white hover:text-primary">Gmail</a>
               </div>
               <div className="flex items-center space-x-5">
                 <SiFiverr className="w-7 h-7" style={{ color: '#1DBF73' }} />
                 <a href="https://fiverr.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary">fiverr</a>
-              </div>
+              </div> */}
               {/* <div className="flex items-center space-x-5">
                 <SiUpwork className="w-7 h-7" style={{ color: '#6FDA44' }} />
                 <a href="https://upwork.com/freelancers/~yourprofile" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary">upwork</a>
