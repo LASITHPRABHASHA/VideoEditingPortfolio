@@ -170,7 +170,7 @@ const Footer = () => {
       >
         <div className="container mx-auto px-6 py-6" >
             <div className="text-white text-sm text-center">
-              ©2025 All rights reserved.
+              ©2026 All rights reserved.
             </div>
            
         </div>
