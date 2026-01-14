@@ -79,7 +79,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.12 }}
             >
               <a
-                href="https://www.fiverr.com"
+                href="https://www.fiverr.com/lasithprabasha"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Fiverr profile (opens in new tab)"
@@ -90,7 +90,7 @@ const About = () => {
               <div className="text-left">
                 <div className="text-sm text-[#708993]">Fiverr</div>
                 <a
-                  href="https://www.fiverr.com"
+                  href="https://www.fiverr.com/lasithprabasha"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#19183B] font-semibold"
