@@ -70,7 +70,7 @@ const About = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <motion.div
+            {/* <motion.div
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.06, y: -5 }}
               whileTap={{ scale: 0.98 }}
@@ -99,7 +99,7 @@ const About = () => {
                   Top Rated Seller
                 </a>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               className="flex items-center space-x-3"
@@ -172,7 +172,7 @@ const About = () => {
                 Crafting Visual Excellence Since 2019
               </h3>
               <p className="text-[#708993] text-lg leading-relaxed mb-6">
-                As a Level 2 Fiverr seller and passionate video editor, I specialize in transforming 
+                As a freelancer and passionate video editor, I specialize in transforming 
                 raw footage into compelling visual narratives. My expertise spans across various 
                 industries, from corporate content to creative storytelling.
               </p>

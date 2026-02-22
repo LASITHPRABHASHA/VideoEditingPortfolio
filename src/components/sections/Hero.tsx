@@ -78,8 +78,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            Bringing your vision to life with cinematic storytelling and premium post-production. 
-            Level 2 Fiverr seller with 5+ years of experience creating stunning visual content.
+            Bringing your vision to life with cinematic storytelling and premium post-production  
+            with 5+ years of experience creating stunning visual content.
           </motion.p>
 
           <motion.div

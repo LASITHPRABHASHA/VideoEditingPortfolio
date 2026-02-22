@@ -165,16 +165,16 @@ const Services = () => {
             <h3 className="text-2xl font-bold text-[#19183B] mb-4">
               Ready to Start Your Project?
             </h3>
-            <p className="text-gray-400 mb-6">
+            {/* <p className="text-gray-400 mb-6">
               Get a custom quote based on your specific needs and timeline.
-            </p>
-            <motion.button
+            </p> */}
+            {/* <motion.button
               className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-full shadow-lg text-gray font-semibold text-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Get Custom Quote
-            </motion.button>
+            </motion.button> */}
           </div>
         </motion.div>
       </div>

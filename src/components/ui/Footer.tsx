@@ -122,7 +122,7 @@ const Footer = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-white font-bold text-lg mb-6">Get In Touch</h3>
+            {/* <h3 className="text-white font-bold text-lg mb-6">Get In Touch</h3> */}
             <div className="space-y-4">
               {/* <div className="flex items-center space-x-5">
                 <SiGmail className="w-7 h-7" style={{ color: '#EA4335' }} />

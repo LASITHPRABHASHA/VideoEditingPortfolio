@@ -138,9 +138,9 @@ const Reviews = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-md text-[#708993] mb-4 font-medium tracking-wide uppercase">
+          {/* <p className="text-md text-[#708993] mb-4 font-medium tracking-wide uppercase">
             Level 2 Fiverr Seller • 300+ Projects Completed
-          </p>
+          </p> */}
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             What my clients
             <br />
