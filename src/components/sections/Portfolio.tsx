@@ -322,7 +322,7 @@ const Portfolio = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                  {project.description}
+                  {/* {project.description} */}
                 </p>
                 
                 <div className="flex items-center justify-between">
@@ -382,7 +382,7 @@ const Portfolio = () => {
                 )}
               </div>
 
-              <p className="text-white">{selectedVideo.description}</p>
+              {/* <p className="text-white">{selectedVideo.description}</p> */}
             </motion.div>
           </motion.div>
         )}
