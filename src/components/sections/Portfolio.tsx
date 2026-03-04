@@ -13,7 +13,7 @@ interface Project {
   category: string;
   thumbnail: string;
   videoUrl: string;
-  description: string;
+  //description: string;
   duration: string;
   views: string;
 }
@@ -67,7 +67,7 @@ const Portfolio = () => {
       category: 'reels',
       thumbnail: '/Thumbnails/film.png',
       videoUrl: 'https://youtu.be/b6jldmLc0zo',
-      description: 'Dynamic commercial showcasing innovative tech solutions with sleek animations.',
+      //description: 'Dynamic commercial showcasing innovative tech solutions with sleek animations.',
       duration: '2:30',
       views: '11K',
     },
@@ -77,7 +77,7 @@ const Portfolio = () => {
       category: 'courses',
       thumbnail: '/Thumbnails/child.png',
       videoUrl: 'https://youtu.be/ZaCSbQjLCTI',
-      description: 'Viral-ready content optimized for social media engagement.',
+      //description: 'Viral-ready content optimized for social media engagement.',
       duration: '0:30',
       views: '8K'
     },
@@ -87,7 +87,7 @@ const Portfolio = () => {
       category: 'commercial',
       thumbnail: '/Thumbnails/podcast.png',
       videoUrl: 'https://youtu.be/diYvWZ3uGYw',
-      description: 'Compelling brand story with emotional narrative and stunning visuals.',
+      //description: 'Compelling brand story with emotional narrative and stunning visuals.',
       duration: '8:45',
       views: '6K'
     },
@@ -97,7 +97,7 @@ const Portfolio = () => {
       category: 'reels',
       thumbnail: '/Thumbnails/corporate .png',
       videoUrl: 'https://youtu.be/msSOXqrT2tc',
-      description: 'Complex concepts simplified through engaging motion design.',
+      //description: 'Complex concepts simplified through engaging motion design.',
       duration: '3:15',
       views: '15K'
     },
@@ -107,7 +107,7 @@ const Portfolio = () => {
       category: 'courses',
       thumbnail: '/Thumbnails/Deal & let go.png',
       videoUrl: 'https://youtu.be/kfDegxD4tPc',
-      description: 'High-converting product showcase with premium aesthetics.',
+      //description: 'High-converting product showcase with premium aesthetics.',
       duration: '1:45',
       views: '2K'
     },
@@ -117,7 +117,7 @@ const Portfolio = () => {
       category: 'courses',
       thumbnail: '/Thumbnails/Convo.jpg',
       videoUrl: 'https://youtu.be/vGiOJSA89kw',
-      description: 'Trend-focused content designed for maximum engagement.',
+      //description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '5K'
     },
@@ -127,7 +127,7 @@ const Portfolio = () => {
       category: 'commercial',
       thumbnail: '/Thumbnails/drawing.png',
       videoUrl: 'https://youtu.be/SUXHWbhHmvw',
-      description: 'Trend-focused content designed for maximum engagement.',
+      //description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '3K'
     },
@@ -137,7 +137,7 @@ const Portfolio = () => {
       category: 'courses',
       thumbnail: '/Thumbnails/Day 1  Release The Restriction Mindset.png',
       videoUrl: 'https://youtu.be/4UJznPv7E10',
-      description: 'Trend-focused content designed for maximum engagement.',
+      //description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '3K'
     },
@@ -147,7 +147,7 @@ const Portfolio = () => {
       category: 'courses',
       thumbnail: '/Thumbnails/Real Estate.png',
       videoUrl: 'https://youtu.be/AyIoNa0CQj8',
-      description: 'Trend-focused content designed for maximum engagement.',
+      //description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '3K'
     },
@@ -157,7 +157,7 @@ const Portfolio = () => {
       category: 'courses',
       thumbnail: '/portfolio/customer10.png',
       videoUrl: 'https://youtu.be/Z3fvaLyAQA0',
-      description: 'Trend-focused content designed for maximum engagement.',
+      //description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '12K'
     },
@@ -167,7 +167,7 @@ const Portfolio = () => {
       category: 'commercial',
       thumbnail: '/portfolio/customer11.png',
       videoUrl: 'https://youtu.be/xtoTSCbgDqQ',
-      description: 'Trend-focused content designed for maximum engagement.',
+      //description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '2K'
     },
@@ -177,7 +177,7 @@ const Portfolio = () => {
       category: 'courses',
       thumbnail: '/portfolio/customer12.png',
       videoUrl: 'https://youtu.be/75s6xC6HM7k',
-      description: 'Trend-focused content designed for maximum engagement.',
+      //description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '6K'
     },
@@ -187,7 +187,7 @@ const Portfolio = () => {
       category: 'shorts',
       thumbnail: '/Thumbnails/floral2.jpeg',
       videoUrl: 'https://youtube.com/shorts/U69ceNiFGgs?feature=share',
-      description: 'Trend-focused content designed for maximum engagement.',
+      //description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
       views: '6K'
     },
