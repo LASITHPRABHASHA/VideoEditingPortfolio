@@ -185,7 +185,7 @@ const Portfolio = () => {
       id: 13,
       title: 'Social Media Short Promo Video',
       category: 'shorts',
-      thumbnail: '/Thumbnails/social media.png',
+      thumbnail: '/Thumbnails/floral2.jpeg',
       videoUrl: 'https://youtube.com/shorts/U69ceNiFGgs?feature=share',
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
@@ -306,7 +306,7 @@ const Portfolio = () => {
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="absolute inset-0 bg-black/0" />
                   <motion.button
-                    className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg pointer-events-auto"
+                    className="w-16 h-16  rounded-full flex items-center justify-center  pointer-events-auto"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setSelectedVideo(project)}
