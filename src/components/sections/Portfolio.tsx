@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { Play} from 'lucide-react';
-import { FaThLarge, FaFilm, FaGraduationCap, FaYoutube,} from 'react-icons/fa';
+import { FaThLarge, FaFilm, FaGraduationCap, FaYoutube, FaInstagram,} from 'react-icons/fa';
 import Image from 'next/image';
 
 interface Project {
@@ -52,6 +52,12 @@ const Portfolio = () => {
       icon: FaYoutube,
       color: 'text-red-500'
     },
+     { 
+      id: 'shorts', 
+      label: 'Shorts',
+      icon: FaInstagram,
+      color: 'text-red-500'
+    },
   ];
 
   const projects = [
@@ -59,7 +65,7 @@ const Portfolio = () => {
       id: 1,
       title: 'Company Film Reel',
       category: 'reels',
-      thumbnail: '/portfolio/customer1.png',
+      thumbnail: '/Thumbnails/film.png',
       videoUrl: 'https://youtu.be/b6jldmLc0zo',
       description: 'Dynamic commercial showcasing innovative tech solutions with sleek animations.',
       duration: '2:30',
@@ -69,7 +75,7 @@ const Portfolio = () => {
       id: 2,
       title: 'Child Care Course For Parents',
       category: 'courses',
-      thumbnail: '/portfolio/customer2.png',
+      thumbnail: '/Thumbnails/child.png',
       videoUrl: 'https://youtu.be/ZaCSbQjLCTI',
       description: 'Viral-ready content optimized for social media engagement.',
       duration: '0:30',
@@ -79,7 +85,7 @@ const Portfolio = () => {
       id: 3,
       title: 'Real Estate Podcast',
       category: 'commercial',
-      thumbnail: '/portfolio/customer4.png',
+      thumbnail: '/Thumbnails/podcast.png',
       videoUrl: 'https://youtu.be/diYvWZ3uGYw',
       description: 'Compelling brand story with emotional narrative and stunning visuals.',
       duration: '8:45',
@@ -89,7 +95,7 @@ const Portfolio = () => {
       id: 4,
       title: 'Corporate Explainer Reel',
       category: 'reels',
-      thumbnail: '/portfolio/customer7.png',
+      thumbnail: '/Thumbnails/corporate .png',
       videoUrl: 'https://youtu.be/msSOXqrT2tc',
       description: 'Complex concepts simplified through engaging motion design.',
       duration: '3:15',
@@ -99,7 +105,7 @@ const Portfolio = () => {
       id: 5,
       title: 'Meditation Course',
       category: 'courses',
-      thumbnail: '/portfolio/customer5.png',
+      thumbnail: '/Thumbnails/Deal & let go.png',
       videoUrl: 'https://youtu.be/kfDegxD4tPc',
       description: 'High-converting product showcase with premium aesthetics.',
       duration: '1:45',
@@ -109,7 +115,7 @@ const Portfolio = () => {
       id: 6,
       title: 'Business English Course',
       category: 'courses',
-      thumbnail: '/portfolio/customer6.png',
+      thumbnail: '/Thumbnails/Convo.jpg',
       videoUrl: 'https://youtu.be/vGiOJSA89kw',
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
@@ -119,7 +125,7 @@ const Portfolio = () => {
       id: 7,
       title: 'Drawing Lessons for Kids',
       category: 'commercial',
-      thumbnail: '/portfolio/customer3.png',
+      thumbnail: '/Thumbnails/drawing.png',
       videoUrl: 'https://youtu.be/SUXHWbhHmvw',
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
@@ -129,7 +135,7 @@ const Portfolio = () => {
       id: 8,
       title: 'Diet Lessons for Beginners',
       category: 'courses',
-      thumbnail: '/portfolio/customer8.png',
+      thumbnail: '/Thumbnails/Day 1  Release The Restriction Mindset.png',
       videoUrl: 'https://youtu.be/4UJznPv7E10',
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
@@ -139,7 +145,7 @@ const Portfolio = () => {
       id: 9,
       title: 'Real Estate Course',
       category: 'courses',
-      thumbnail: '/portfolio/customer9.png',
+      thumbnail: '/Thumbnails/Real Estate.png',
       videoUrl: 'https://youtu.be/AyIoNa0CQj8',
       description: 'Trend-focused content designed for maximum engagement.',
       duration: '0:15',
@@ -175,6 +181,16 @@ const Portfolio = () => {
       duration: '0:15',
       views: '6K'
     },
+     {
+      id: 13,
+      title: 'Social Media Short Promo Video',
+      category: 'shorts',
+      thumbnail: '/Thumbnails/social media.png',
+      videoUrl: 'https://youtube.com/shorts/U69ceNiFGgs?feature=share',
+      description: 'Trend-focused content designed for maximum engagement.',
+      duration: '0:15',
+      views: '6K'
+    },
     
   ];
 
@@ -182,20 +198,33 @@ const Portfolio = () => {
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
-  // helper: extract a YouTube ID from a variety of inputs (ID, full URL, or "youtube:ID")
+  // helper: extract a YouTube ID from a variety of inputs (ID, full URL, or
+  // "youtube:ID")
   const getYouTubeId = (input: string): string | null => {
     if (!input) return null;
-    // allow explicit marker "youtube:VIDEOID"
+
+    // explicit "youtube:ID" marker
     if (input.startsWith('youtube:')) return input.split('youtube:')[1] || null;
-    // bare 11-char id
+
+    // raw 11‑character ID
     if (/^[\w-]{11}$/.test(input)) return input;
-    // try common URL patterns
+
+    // v= query string
     const vMatch = input.match(/[?&]v=([^&]+)/);
     if (vMatch) return vMatch[1];
+
+    // youtu.be short link
     const shortMatch = input.match(/youtu\.be\/([^?&/]+)/);
     if (shortMatch) return shortMatch[1];
+
+    // regular embed URL
     const embedMatch = input.match(/youtube\.com\/embed\/([^?&/]+)/);
     if (embedMatch) return embedMatch[1];
+
+    // **new**: shorts URL
+    const shortsMatch = input.match(/youtube\.com\/shorts\/([^?&/]+)/);
+    if (shortsMatch) return shortsMatch[1];
+
     return null;
   };
 
@@ -274,9 +303,10 @@ const Portfolio = () => {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="absolute inset-0 bg-black/0" />
                   <motion.button
-                    className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg"
+                    className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg pointer-events-auto"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setSelectedVideo(project)}

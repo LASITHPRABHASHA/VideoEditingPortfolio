@@ -12,7 +12,6 @@ const About = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
   const skills = [
     'Advanced Video Editing',
     'Motion Graphics Design',
