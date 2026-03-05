@@ -69,7 +69,7 @@ const About = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            {/* <motion.div
+            <motion.div
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.06, y: -5 }}
               whileTap={{ scale: 0.98 }}
@@ -98,7 +98,7 @@ const About = () => {
                   Top Rated Seller
                 </a>
               </div>
-            </motion.div> */}
+            </motion.div>
 
             <motion.div
               className="flex items-center space-x-3"
