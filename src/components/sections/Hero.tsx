@@ -35,7 +35,7 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover overla"
+          className="w-full h-full object-cover overlay"
         >
           <source src="/videos/hero.webm" type="video/webm" />
         </video>
